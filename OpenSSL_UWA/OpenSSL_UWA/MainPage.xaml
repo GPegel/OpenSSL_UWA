@@ -6,6 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Background="Black">
+    
+    
 
     <Grid Background="Black">
         <TextBlock Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="32">OpenSSL_UWA</TextBlock>
@@ -21,6 +23,9 @@
         <TextBlock Foreground="White" x:Name="keySize" HorizontalAlignment="Left" FontFamily="12" Margin="10,374,0,0" TextWrapping="Wrap" Text="Key Size :" VerticalAlignment="Top" FontSize="21.333"/>
         <TextBlock Foreground="White" x:Name="hashAlgorithm" HorizontalAlignment="Left" FontFamily="12" Margin="10,404,0,0" TextWrapping="Wrap" Text="Hash Algorithm :" VerticalAlignment="Top" FontSize="21.333"/>
         <ComboBox x:Name="certificateTypeCombo" HorizontalAlignment="Left" Margin="175,65,0,0"  Width="300" Height="32" VerticalAlignment="Top">
+            <ComboBox.Background>
+                <SolidColorBrush Color="#66FFFFFF"/>
+            </ComboBox.Background>
             <ComboBoxItem Content="Single domain certificate" IsSelected="True"/>
             <ComboBoxItem Content="Wildcard certificate"/>
             <ComboBoxItem Content="Multi-domain certificate"/>
@@ -43,9 +48,10 @@
         <ComboBox x:Name="hashAlgorithmCombo" HorizontalAlignment="Left" Margin="175,398,0,0"  Width="300" Height="32" VerticalAlignment="Top">
             <ComboBoxItem Content="SHA-1"/>
             <ComboBoxItem Content="SHA-256" IsSelected="True"/>
-            
         </ComboBox>
 
+        
+        
 
     </Grid>
 </Page>
