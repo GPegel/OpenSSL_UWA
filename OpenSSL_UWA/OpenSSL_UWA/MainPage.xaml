@@ -10,6 +10,42 @@
     <Grid Background="Black">
         <TextBlock Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="32">OpenSSL_UWA</TextBlock>
         <TextBlock Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="12" Margin="138,43,138,0">Version 1.0.0</TextBlock>
+        <TextBlock Foreground="White" x:Name="certificateType" HorizontalAlignment="Left" FontFamily="16" Margin="10,71,0,0" TextWrapping="Wrap" Text="Certificate Type :" VerticalAlignment="Top" FontSize="21.333"/>
+        <TextBlock Foreground="White" x:Name="commonName" HorizontalAlignment="Left" FontFamily="16" Margin="10,108,0,0" TextWrapping="Wrap" Text="Common Name :" VerticalAlignment="Top" FontSize="21.333"/>
+        <TextBlock Foreground="White" x:Name="companyName" HorizontalAlignment="Left" FontFamily="16" Margin="10,145,0,0" TextWrapping="Wrap" Text="Company Name :" VerticalAlignment="Top" FontSize="21.333"/>
+        <TextBlock Foreground="White" x:Name="companyDepartment" HorizontalAlignment="Left" FontFamily="16" Margin="10,182,0,0" TextWrapping="Wrap" Text="Department :" VerticalAlignment="Top" FontSize="21.333"/>
+        <TextBlock Foreground="White" x:Name="eMail" HorizontalAlignment="Left" FontFamily="16" Margin="10,219,0,0" TextWrapping="Wrap" Text="e-mail address :" VerticalAlignment="Top" FontSize="21.333"/>
+        <TextBlock Foreground="White" x:Name="cityName" HorizontalAlignment="Left" FontFamily="12" Margin="10,256,0,0" TextWrapping="Wrap" Text="City name :" VerticalAlignment="Top" FontSize="21.333"/>
+        <TextBlock Foreground="White" x:Name="stateProvince" HorizontalAlignment="Left" FontFamily="12" Margin="10,297,0,0" TextWrapping="Wrap" Text="State/Province :" VerticalAlignment="Top" FontSize="21.333"/>
+        <TextBlock Foreground="White" x:Name="countryName" HorizontalAlignment="Left" FontFamily="12" Margin="10,330,0,0" TextWrapping="Wrap" Text="Country :" VerticalAlignment="Top" FontSize="21.333"/>
+        <TextBlock Foreground="White" x:Name="keySize" HorizontalAlignment="Left" FontFamily="12" Margin="10,374,0,0" TextWrapping="Wrap" Text="Key Size :" VerticalAlignment="Top" FontSize="21.333"/>
+        <TextBlock Foreground="White" x:Name="hashAlgorithm" HorizontalAlignment="Left" FontFamily="12" Margin="10,404,0,0" TextWrapping="Wrap" Text="Hash Algorithm :" VerticalAlignment="Top" FontSize="21.333"/>
+        <ComboBox x:Name="certificateTypeCombo" HorizontalAlignment="Left" Margin="175,65,0,0"  Width="300" Height="32" VerticalAlignment="Top">
+            <ComboBoxItem Content="Single domain certificate" IsSelected="True"/>
+            <ComboBoxItem Content="Wildcard certificate"/>
+            <ComboBoxItem Content="Multi-domain certificate"/>
+        </ComboBox>
+        <TextBox x:Name="commonNameTextBox" HorizontalAlignment="Left" Margin="175,102,-115,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" Height="32"/>
+        <TextBox x:Name="companyNameTextBox" HorizontalAlignment="Left" Margin="175,139,-115,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" Height="32"/>
+        <TextBox x:Name="departmentTextBox" HorizontalAlignment="Left" Margin="175,176,-115,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" Height="32"/>
+        <TextBox x:Name="eMailAddresTextBox" HorizontalAlignment="Left" Margin="175,213,-115,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" Height="32"/>
+        <TextBox x:Name="cityNameTextBox" HorizontalAlignment="Left" Margin="175,250,-115,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" Height="32"/>
+        <TextBox x:Name="stateProvinceTextBox" HorizontalAlignment="Left" Margin="175,287,-115,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" Height="32"/>
+        <ComboBox x:Name="countryCombo" HorizontalAlignment="Left" Margin="175,324,0,0"  Width="300" Height="32" VerticalAlignment="Top">
+            <ComboBoxItem Content="Choose country" IsSelected="True"/>
+            <ComboBoxItem Content="country 1"/>
+            <ComboBoxItem Content="Country 2"/>
+        </ComboBox>
+        <ComboBox x:Name="keySizeCombo" HorizontalAlignment="Left" Margin="175,361,0,0"  Width="300" Height="32" VerticalAlignment="Top">
+            <ComboBoxItem Content="2048bit" IsSelected="True"/>
+            <ComboBoxItem Content="4096bit"/>
+        </ComboBox>
+        <ComboBox x:Name="hashAlgorithmCombo" HorizontalAlignment="Left" Margin="175,398,0,0"  Width="300" Height="32" VerticalAlignment="Top">
+            <ComboBoxItem Content="SHA-1"/>
+            <ComboBoxItem Content="SHA-256" IsSelected="True"/>
+            
+        </ComboBox>
+
 
     </Grid>
 </Page>
