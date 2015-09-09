@@ -6,8 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Background="Black">
-    
-    
+
+
 
     <Grid Background="Black">
         <TextBlock Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="32">OpenSSL_UWA</TextBlock>
@@ -49,9 +49,8 @@
             <ComboBoxItem Content="SHA-1"/>
             <ComboBoxItem Content="SHA-256" IsSelected="True"/>
         </ComboBox>
-
-        
-        
+        <TextBox x:Name="opensslCommandBox" HorizontalAlignment="Left" Margin="10,460,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340" Height="128"/>
+        <Button x:Name="button" Content="Go! Go! Go!" HorizontalAlignment="Left" Margin="239,593,0,0" VerticalAlignment="Top" Background="#33FFFFFF" BorderBrush="White" Width="111" Click="button_Click"/>
 
     </Grid>
 </Page>
