@@ -22,6 +22,7 @@ namespace OpenSSL_UWA
         public MainPage()
         {
             this.InitializeComponent();
+           
 
         }
 
@@ -41,24 +42,26 @@ namespace OpenSSL_UWA
             //  The country, keysize and hash vars are not working in this way. I need another 
             //  solution for this.
 
-            //var country = countryCombo.SelectedItem;
-            //var keySize = keySizeCombo.SelectedItem;
-            //var hash = hashAlgorithmCombo.SelectedItem;
+            
+            var country = countryCombo.SelectedValue;
+            var keySize = keySizeCombo.SelectedItem;
+            var hash = hashAlgorithmCombo.SelectedItem;
 
             string[] commands = new string[]
 
+            
             {
-                "openssl req -new - sha256 - newkey rsa: " +
+                "openssl req -new - " + hash + " - newkey rsa: " +
                 keySize + " " + "- nodes -out " +
                 commonName + ".csr" + " - keyout " + commonName + ".key" +
                 " -subj " + " " +
-                "'/C=" + countryCombo +
+                "\"/C=" + country +
                 "/ST=" + stateProvince +
                 "/L=" + city +
                 "/O=" + company +
                 "/OU=" + department +
                 "/CN=" + commonName +
-                "/emailAddress=" + email + ""
+                "/emailAddress=\"" + email + ""
 
             };
 
@@ -74,6 +77,9 @@ namespace OpenSSL_UWA
 
             }
         }
+
+        
+
 
         //  This piece of code I'm going to use later to do a automatic population
         //  of the countryComboBox from an online service.
@@ -95,7 +101,9 @@ namespace OpenSSL_UWA
 
         //}
 
+
     }
+
 
 }
 
